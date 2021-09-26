@@ -1,0 +1,22 @@
+# OS generated files #
+######################
+*.gz
+*PKG-INFO
+*.egg-info
+.env
+
+# Python Related #
+.python-version
+.pytest_cache
+__pycache__
+*checkpoint.ipynb
+.ipynb_checkpoints
+
+# IDE #
+.DS_Store
+*.vscode
+*.idea
+
+# Extensions of data files #
+*.csv
+*.zip
