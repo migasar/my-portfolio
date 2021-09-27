@@ -8,7 +8,7 @@ class Project(models.Model):
     technology = models.CharField(max_length=20)
     # image = models.FilePathField(path="/images")
     # image = models.ImageField(upload_to='projects/static/images/')
-    image = models.ImageField(upload_to='projects')
+    image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return self.title
