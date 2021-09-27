@@ -6,7 +6,7 @@ from .models import Project
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    fields = ['title', 'technology', 'description']
+    fields = ['title', 'technology', 'description', 'image']
     list_display = ('title', 'technology')
 
 
