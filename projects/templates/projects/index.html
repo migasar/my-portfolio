@@ -1,12 +1,26 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends './base.html' %}
+{% load static %}
+{% block page_content %}
 <h1>My Projects</h1>
 {% if project_list %}
     <ul>
     {% for project in project_list %}
-        <li><a href="{% url 'projects:detail' project.id %}">{{ project.title }}</a></li>
+        {% comment %} <li><a href="{% url 'projects:detail' project.id %}">{{ project.title }}</a></li> {% endcomment %}
         {% comment %} <li><a href="/projects/{{ project.id }}/">{{ project.title }}</a></li> {% endcomment %}
+        <div class="col-md-4">
+            <div class="card mb-2">
+                <img class="card-img-top" src="{% static project.image %}">
+                {% comment %} <img class="card-img-top" src="{% static 'projects/images/project{{ project.id }}.png' %}" alt="project caption"> {% endcomment %}
+                {% comment %} <img class="card-img-top" src="{% static 'projects/images/project{{ project.id }}.png' %}" alt="project caption"> {% endcomment %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.technology }}</p>
+                    <p class="card-text">{{ project.description }}</p>
+                    <a href="{% url 'projects:detail' project.id %}"><em>Read More</em></a>
+                    {% comment %} <a href="{% url 'projects:detail' project.id %}" class="btn btn-primary">Read More</a> {% endcomment %}
+                </div>
+            </div>
+        </div>
     {% endfor %}
     </ul>
 {% else %}
