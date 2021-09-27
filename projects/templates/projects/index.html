@@ -1,7 +1,6 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}">
-
+{% block content %}
 <h1>My Projects</h1>
 {% if project_list %}
     <ul>
@@ -13,3 +12,4 @@
 {% else %}
     <p>No projects are available.</p>
 {% endif %}
+{% endblock  %}
