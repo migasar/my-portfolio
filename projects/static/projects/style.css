@@ -1,0 +1,12 @@
+body {
+    background: whitesmoke url("images/background.gif") no-repeat;
+    /* background-color: ghostwhite; */
+}
+
+/* h1 {
+    color: green;
+} */
+
+li a {
+    color: green;
+}
